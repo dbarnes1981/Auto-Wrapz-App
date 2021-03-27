@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background: #1f557c; */
+  background: rgba(0,0,0,0.5);
+  /* mix-blend-mode: overlay; */
+}
+
+.slider img {
+  object-fit: cover;
+  max-width: 1400px;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-content {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-content.active {
+  animation: fadeImage 0.3s;
+}
+
+@keyframes fadeImage {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
+
+.slide-content img {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.showcase .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  max-width: 1240px; 
+  width: 100%;
+  padding: 20px 10px;
+}
+
+.logo {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 20px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo::before {
+  content: "";
+  background-color: orangered;
+  width: 25px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  margin-left: 13px;
+  transform-origin: left right;
+  transform: skewY(9deg);
+  z-index: -1;
+}
+
+/* .logo:hover {
+  color: #000;
+} */
+
+.container, ul {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.container, li, a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 15px;
+  margin-left: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container a:hover {
+  color: orangered;
+  text-decoration: underline;
+}
+
+.fa-chevron-left {
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 1.9rem;
+  position: absolute;
+  top: 50%;
+  padding: 10px 50px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-chevron-right {
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 1.9rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 10px 50px;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-chevron-right:hover {
+  color: orangered;
+}
+
+.fa-chevron-left:hover {
+  color: orangered;
+}
+
+/* Main Title */
+
+.title_section, .scroll{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  margin-top: 15%;
+  max-width: 600px;
+}
+
+.title h1 {
+  color: #fff;
+  font-weight: 600;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+span {
+  color: orangered;
+}
+
+.title .para_1 {
+  color:#fff;
+  line-height: 1.5;
+}
+
+.button {
+  margin: 0 auto;
+  background: orangered;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin-top: 5%; 
+  max-width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: #fff;
+  border: 2px solid orangered;
+}
+
+#schedule {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+#schedule:hover {
+  color: orangered;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll_title {
+  cursor: pointer;
+  margin-top: 20%; 
+}
+
+.scroll_title p {
+  font-size: 0.5rem;
+  color: lightslategray;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.scroll_title, .fa-chevron-down {
+  font-size: 0.8rem;
+  color: lightslategray;
+}
+
+.scroll:hover {
+  transform: translateY(-10px);
+}
+
+/* About Section */
+
+.about_section {
+  position: relative;
+  height: 100vh;
+  background-color:#fff;
+  max-width: 1350px;
+}
+
+.about_section, .row {
+  padding: 20px;
+  margin-top: 3%;
+}
+
+#col-1 {
+  position: absolute;
+  left: 0%;
+  top: 0;
+  margin-top: 3%;
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+ #col-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 22%;
+  margin-left: 15%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* .about_column_2 {
+  width: 100%;
+} */
+
+.about_column_2 .about_title {
+  position: absolute;
+  top: 0; 
+  right: 0;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+}
+
+.about_column_2 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.about_column_2 p {
+  font-size: 0.8rem;
+  line-height: 2;
+  color: lightslategray;
+}
+
+.about_column_2 a {
+  color: orangered;
+  font-size: 0.8rem;
+  margin-left: 0%;
+}
+
+/* Search Section */
+
+.search_container {
+  position: relative;
+  width: 100%;
+  /* height: 125vh; */
+}
+
+.bg_search img {
+  object-fit: cover;
+  max-width: 1400px;
+  width: 100%;
+  height: 110vh;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  z-index: -1;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: 5%;
+  max-width: 1150px;
+  width: 100%;
+  height: 300px;
+  background: #fff;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+input {
+  max-width: 250px;
+}
+
+label, input {
+  align-items: center;
+  font-size:  0.9rem;
+  padding: 3px 10px;
+}
+  
+#site-search {
+  border-radius: 5px;
+  outline: none;
+}
+
+#search_btn {
+  font-size: 0.3rem;
+  font-style: italic;
+  letter-spacing: 2px;
+  padding: 5px 15px;
+  background: orangered;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#search_btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#search_btn:hover {
+  background: #fff;
+  color: orangered;
+  border: 2px solid orangered;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.car_title {
+  font-weight: 500;
+  padding: 20px;
+  margin-right: 15%;
+}
+
+.car_detail {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.car_detail h6 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.car_detail p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: lightslategray;
+}
+
+.car_image {
+  display: flex;
+  max-width: 1150px;
+  width: 100%;
+}
+
+#first_vh, #second_vh {
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  transform: translate(-0%, 15%);
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  /* background-color: rgba(0,0,0,0.5); */
+  /* opacity: 0.7; */
+  z-index: 999;
+}
+
+/* Footer Section */
+
+.footer_section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.back-g {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background: #1f557c; */
+  background: rgba(0,0,0,0.8);
+  /* mix-blend-mode: overlay; */
+}
+
+#bottom_img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  max-width: 1400px;
+}
+
+.new {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.9rem;
+  padding: 15px;
+  line-height: 1.4;
+}
+
+.footer_section p {
+  position:absolute;
+  top: 35%;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  line-height: 1.8;
+}
+
+#clicker {
+  position:absolute;
+  top: 45%;
+}
+
+.final_foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px 30px;
+  background: #1b1b1b;
+  max-width: 1221px;
+  overflow-x:hidden;
+}
+
+.final_foot,.reserved,.phone,.email{
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: lightslategray;
+  text-transform: capitalize;
+}
+
+.icons {
+  font-size: 1.2rem;
+  cursor: pointer;
+  
+}
+
+.send {
+  text-transform: lowercase;
+}
