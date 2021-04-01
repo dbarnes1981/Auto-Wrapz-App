@@ -57,20 +57,24 @@ body {
   overflow-x: hidden;
 }
 
+.showcase {
+  max-width: 1240px;
+}
+
 .showcase .logo {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1%;
 }
 
-.container {
-  max-width: 1240px; 
+.container { 
   width: 100%;
   padding: 20px 10px;
 }
 
 .logo {
   color: #fff;
+  margin-left: 20px;
   cursor: pointer;
   position: relative;
   font-size: 1.4rem;
@@ -103,6 +107,7 @@ body {
   position: absolute;
   top: 0;
   right: 1%;
+  margin-top: 12px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -343,6 +348,9 @@ span {
   width: 100%;
   height: 300px;
   background: #fff;
+  /* box-shadow: 1px -2px 16px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px -2px 16px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px -2px 16px 2px rgba(0,0,0,0.75); */
 }
 
 label {
@@ -394,7 +402,8 @@ label, input {
 }
 
 .car_title {
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 400;
   padding: 20px;
   margin-right: 15%;
 }
@@ -406,7 +415,7 @@ label, input {
 
 .car_detail h6 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .car_detail p {
@@ -466,7 +475,7 @@ label, input {
 .new {
   position: absolute;
   top: 10%;
-  left: 25%;
+  /* left: 25%; */
   color: #fff;
   text-align: center;
   font-weight: 600;
@@ -516,4 +525,123 @@ label, input {
 
 .send {
   text-transform: lowercase;
+}
+
+/******* Media Query Section *******/
+
+@media (max-width: 1200px) {
+  .title_section, .title {
+    margin-top: 16%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about_column_1 {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .final_foot {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.1;
+  }
+  .final_foot p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 850px) {
+ .logo, h1 {
+    font-size: 1.1rem;
+  }
+  .container, li, a {
+    font-size: 0.8rem;
+  }
+ .fa-chevron-left, .fa-chevron-right {
+    visibility: hidden;
+  }
+ .title h1 {
+    font-size: 1.8rem;
+  }
+  .para_1 {
+    font-size: 0.8rem;
+    max-width: 425px;
+  }
+  .button {
+    max-width: 160px;
+    padding: 10px;
+  }
+  .button, #schedule  {
+    font-weight: 200;
+    font-size: 0.7rem;
+  }
+  .about_section {
+    margin-top: 0;
+  }
+  .about_title .why {
+    font-size: 1.8rem;
+  }
+  .about_title p {
+    font-size: 0.8rem;
+  }
+  .about_title a {
+    font-size: 0.5rem;
+  }
+  label {
+    font-size: 0.7rem;
+  }
+  input {
+    max-width: 150px;
+    padding: 2px 10px;
+  }
+  .car_title h6, .car_detail h6 {
+    font-size: 1.3rem;
+  }
+  .car_detail {
+    max-width: 200px;
+  }
+  .car_detail p {
+    font-size: 0.7rem;
+  }
+  .car_image {
+    display: block;
+  }
+  #first_vh {
+    height: 400px;
+    transform: translate(-0%, 5%);
+  }
+  #second_vh {
+    display: none;
+  }
+  .backdrop {
+    height: 400px;
+  }
+  .new {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  .footer_section p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container ul a {
+    display: none;
+  }
+}
+
+@media (max-width: 525px) {
+  .new {
+    font-size: 1.5rem;
+  }
+  .footer_section p {
+    max-width: 300px;
+  }
+  #clicker {
+    position: absolute;
+    top: 55%;
+  }
 }
