@@ -91,4 +91,36 @@ closeBtn.addEventListener('click', () => {
   document.body.classList.remove('show-nav');
 });
     
+// Car API Section 
+
+// document.getElementById('search_btn').addEventListener('click', search_btn);
     
+async function getCarInfo() {
+ await fetch('luxuryCars.json')
+  .then((res) => res.json())
+  .then((data) => {
+    // console.log(data[1].desc);
+    var output = '';
+    for(var i = 0; i < data.length; i++) {
+      // console.log(data[i].name);
+      output += `
+        <div class="info">
+              <h6 class="car_title" data-aos="fade-right" data-aos-duration="3000">${data[i].make}</h6>
+              <div class="car_detail" data-aos="fade-left" data-aos-duration="3000">
+                <h6>${data[i].model}</h6>
+                <p>${data[i].desc}</p>
+              </div>
+            </div>
+            <div class="car_image" data-aos="fade-in" data-aos-duration="3000">
+              <img src=${data[i].image} id="first_vh">
+            <img src=${data[i].rear_image} id="second_vh">
+            </div>
+          </div>
+        `;
+    }
+    document.getElementById('output').innerHTML = output;
+  })
+  .catch((err) => console.log(err))
+}
+
+getCarInfo();

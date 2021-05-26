@@ -1,0 +1,24 @@
+
+
+[
+  {
+    "id": "1",
+    "make": "Mercedes Benz",
+    "model": "S-Class",
+    "desc": "The new S-Class is longer and wider, and yet all-new rear-axle steering makes it more nimble, with a tighter turning radius for urban driving. Activate the massaging seats, cue an ENERGIZING Comfort wellness program, raise the rear-seat calf rests, bask in the Burmester 4D sound system.",
+    "image": "https://s1.paultan.org/image/2020/09/2021-W223-Mercedes-Benz-S-Class-Plug-in-Hybrid-Model-5-630x330.jpg",
+    "rear_image": "https://images.caricos.com/m/mercedes-benz/2021_mercedes-benz_s-class/images/2560x1440/2021_mercedes-benz_s-class_169_2560x1440.jpg"
+  },
+  {
+    "id": "2",
+    "name": "BMW",
+    "desc": "BMW AG, originally an initialism for Bayerische Motoren Werke in German, or Bavarian Motor Works in English) is a German multinational company which currently produces luxury automobiles and motorcycles, and also produced aircraft engines until 1945.",
+    "image": "https://drive.google.com/uc?id=1vo815XZpsVgStC-gU9-O_oP3SeBoA6T4"
+  },
+  {
+    "id": "3",
+    "name": "Bentley",
+    "desc": "Bentley Motors Limited is a British manufacturer and marketer of luxury cars and SUVs—and a subsidiary of the Volkswagen Group since 1998.",
+    "image": "https://drive.google.com/uc?id=1J26Rmf_sPjUdEgiAesHqN8i5o-JlOwSl"
+  }
+]

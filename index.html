@@ -114,21 +114,26 @@
       </div>
     </div>
 
-    <!-- Search Section -->
+    <!-- Drop Down List Section -->
 
     <div class="search_container" id="search">
       <div class="bg_search" id="bg_search">
         <img src="img/bg_search.jpg">
         <div class="backdrop">
-          <label for="car-finder" data-aos="fade-down" data-aos-duration="3000">Search for vehicles
-            <input type="search" id="site-search" name="q"
-                  aria-label="Search">
-            <a href="#" id="search_btn">search</a>
-          </label>
+        <label for="car-finder" data-aos="fade-down" data-aos-duration="3000">Choose a Car:
+          <select name="cars" id="cars">   
+            <option value="mercedes">Mercedes</option>                   
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="audi">Audi</option>
+          </select>
+        </label>
 
           <!-- Car Info Section -->
 
-          <div class="info">
+          <div id="output"></div>
+
+          <!-- <div class="info">
             <h6 class="car_title" data-aos="fade-right" data-aos-duration="3000">Nissan Altima</h6>
             <div class="car_detail" data-aos="fade-left" data-aos-duration="3000">
               <h6>Altima SR 3.5</h6>
@@ -139,7 +144,7 @@
             <img src="img/navy_blue_SR.jpg" id="first_vh">
           <img src="img/rear_sr.jpg" id="second_vh">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
